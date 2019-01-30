@@ -1,29 +1,29 @@
 body
 {
-  margin: 0
-  padding: 0
-  font-size: 16px
-  font-family : sans-serif;
-  color: white;
-  font-weight: 400;
-  background-color: black;
-
+background-color: black;
+display: flex;
 
 }
 
+
 #Logo
 {
-  height: 60px
-  width: 120px
+background-color: black;
+float: left;
+height: 100vh;
+width: 50vh;
+flex: 1;
+overflow: hidden;
 }
 
 
 #SignUp-Box
-{
-
+{  height: 100vh;
+  margin: 0px;
+  width: 50vh;
+  float: right;
+  right: 0px;
   background-color: rgb(253, 156, 0);
-  position: relative;
-  margin: 5% auto;
-  height: 1000px
-  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.6);
+  color: white;
+  flex: 1;
 }
