@@ -4,7 +4,15 @@ background-color: black;
 display: flex;
 
 }
+h1
+{
+  font-family: 'Muli', sans-serif;
+}
+#SignUpForm
+{
+margin-top: 20vh;
 
+}
 
 #Logo
 {
@@ -27,4 +35,59 @@ overflow: hidden;
   color: white;
   flex: 1;
   text-align:center
+}
+
+input[type=text ] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-image: url('usernameIcon.png');
+  background-size: 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+input[type=email ] {
+
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-image: url('emailIcon.png');
+  background-size: 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+
+}
+input[type=password ] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-image: url('passwordIcon.png');
+  background-size: 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+#signUp
+{ font-family: 'Muli', sans-serif;
+  background-color:black ;
+  color: white;
+  font-size: 15px;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  opacity: 1.0;
 }
