@@ -1,0 +1,78 @@
+body
+{
+background-color: black;
+display: flex;
+
+}
+
+
+#logoLogin
+{
+background-color: black;
+position: fixed;
+margin-top: 0px;
+height: 100vh;
+width: 50vh;
+vertical-align: center;
+margin-left: 62vh;
+overflow: hidden;
+}
+
+#login-Box
+
+{ text-align: center;
+  position:absolute;
+  height: 40vh;
+  width: 50vh;
+  align-items: center;
+  background-color:rgb(253, 156, 0);
+  margin-left: 60vh;
+  margin-top: 30vh;
+}
+
+
+
+input[type=email ] {
+
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-image: url('emailIcon.png');
+  background-size: 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+
+}
+
+input[type=password ] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-image: url('passwordIcon.png');
+  background-size: 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+
+
+
+#loginButton
+{ font-family: 'Muli', sans-serif;
+  background-color:black ;
+  color: white;
+  font-size: 15px;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  opacity: 1.0;
+}
