@@ -43,7 +43,8 @@ input{
   background-color: rgb(253, 156, 0);
   color: white;
   flex: 1;
-  text-align:center
+  text-align:center;
+
 }
 
 input[type=text ] {
@@ -58,6 +59,9 @@ input[type=text ] {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
+  border-width: thin;
+  border-color: black;
+  border-radius: 8px;
 }
 
 input[type=email ] {
@@ -73,6 +77,9 @@ input[type=email ] {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
+  border-width: thin;
+  border-color: black;
+  border-radius: 8px;
 
 }
 input[type=password ] {
@@ -87,6 +94,9 @@ input[type=password ] {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
+  border-width: thin;
+  border-color: black;
+  border-radius: 8px;
 }
 .signUp
 { font-family: 'Muli', sans-serif;
@@ -98,4 +108,6 @@ input[type=password ] {
   cursor: pointer;
   width: 70%;
   opacity: 1.0;
+  margin-top: 10px;
+  border-radius: 10px;
 }

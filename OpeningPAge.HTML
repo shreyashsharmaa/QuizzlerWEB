@@ -4,21 +4,44 @@
   <link rel="stylesheet" href="style1.css">
   <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
 <title>Quizzler - Sizzler for your Brain</title>
+<script>
+function validation()
+{
+var un=document.forms["SignUpForm"]["username"].value;
+var em=document.forms["SignUpForm"]["email"].value;
+var psw=document.forms["SignUpForm"]["password1"].value;
+var psw1=document.forms["SignUpForm"]["password2"].value;
+
+if(un=="" || em=="" || psw=="" || psw1=="")
+{
+alert("All fields are required");
+return false;
+}
+else
+if(psw.length<8){
+alert("Password should contain alteast 8 characters");
+return false;
+}
+if(psw1!=psw){
+alert("Confirm Password does not match");
+return false;
+}
+}
+</script>
 </head>
 
 
 <body>
   <div id="Logo" >
 
-
   <img src="quizzler-logo.png" alt="logoImage" style="text-align:center;margin-top:30%;margin-left:10%;" width="70%" >
 
-
+<span id="arrow"><a href="#top" >&#8681;</a></span>
   </div>
 
 <div id="SignUp-Box" >
 
-    <form id="SignUpForm">
+    <form id="SignUpForm" onsubmit=" return validation()">
     <h1> CREATE AN ACCOUNT </h1><br>
    <input  id="username" type="text" name="username" placeholder="Username"><br>
 
