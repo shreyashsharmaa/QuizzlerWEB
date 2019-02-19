@@ -30,7 +30,10 @@ flex: 1;
 overflow: hidden;
 }
 
-
+input{
+	border:1px solid black;
+	
+}
 #SignUp-Box
 {  height: 100vh;
   margin: 0px;
@@ -85,8 +88,7 @@ input[type=password ] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
-
-#signUp
+.signUp
 { font-family: 'Muli', sans-serif;
   background-color:black ;
   color: white;
