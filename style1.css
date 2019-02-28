@@ -39,8 +39,8 @@ input{
   margin: 0px;
   width: 50vh;
   float: right;
-  right: 0px;
-  background-color: linear-gradient( 30deg ,rgb(253, 156, 0),rgb(253, 156, 0),yellow);
+  padding: 0px;
+  background: linear-gradient( 30deg ,rgb(253, 156, 0),rgb(253, 156, 0),yellow);
   color: white;
   flex: 1;
   text-align:center;
