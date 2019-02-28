@@ -5,6 +5,11 @@
   <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
 <title>Quizzler - Sizzler for your Brain</title>
 <script>
+function open()
+{ window.open("welcome.html");
+
+}
+
 function validation()
 {
 
@@ -32,7 +37,7 @@ if(psw1!=psw){
 alert("Confirm Password does not match");
 return false;
 }
-}
+
 function ValidateEmail(uemail)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -44,8 +49,11 @@ else
 {
 alert("You have entered an invalid email address!");
 return false;
+
 }
 }
+}
+
 </script>
 </head>
 

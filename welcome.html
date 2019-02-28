@@ -5,10 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript">
-  window.onbeforeunload = function(){
-    return 'Are you sure you want to leave?';
-  };
-}
+
+
 </script>
 <style>
 * {
@@ -21,15 +19,53 @@ body {
   margin: 0;
 }
 
-#profileImage
+#container
 {
-  background:black;
-  border-radius:50%;
-  height:200px;
-  width:200px;
+border-width:10px;
+text-align:center;
+height:50vh;
+
+
+
 
 
 }
+
+#signUp
+{ font-family: 'Muli', sans-serif;
+  background: linear-gradient( 30deg ,rgb(253, 156, 0),rgb(253, 156, 0),yellow);
+  color: white;
+  font-size: 15px;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 1.0;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#topic {
+
+  width: 50%;
+  height:30px;
+  padding: 12px 20px;
+
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-size: 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  border-width: thin;
+  border-color: black;
+  border-radius: 8px;
+
+
+}
+
+
 
 
 
@@ -43,7 +79,6 @@ body {
 .header h1 {
   font-size: 75px;
 }
-
 .navbar {
   overflow: hidden;
   background-color: black;
@@ -95,13 +130,55 @@ body {
 
 <div class="header" id="grad1">
   <h1>WELCOME TO QUIZZLER</h1>
-  <p>Sizzler for your Brain !</p>
+<marquee>  <p>Sizzler for your Brain !</p></marquee>
 </div>
 
 <div class="navbar">
 
   <a href="dashboard.html" class="right">DASHBOARD</a>
 </div>
+
+<div id="container">
+<form>
+  <ul  style="list-style-type:none;">
+    <li><h3 style="margin-top:20vh;font-size:40px;">SELECT TOPIC FOR QUIZ</h3><li>
+    <li>
+      <select name="trivia_category" id = "topic" class="form-control">
+			<option value="any">Any Category</option>
+			<option value="9">General Knowledge</option>
+      <option value="10">Entertainment: Books</option>
+      <option value="11">Entertainment: Film</option>
+      <option value="12">Entertainment: Music</option>
+      <option value="13">Entertainment: Musicals &amp; Theatres</option>
+      <option value="14">Entertainment: Television</option>
+      <option value="15">Entertainment: Video Games</option>
+      <option value="16">Entertainment: Board Games</option>
+      <option value="17">Science &amp; Nature</option>
+      <option value="18">Science: Computers</option>
+      <option value="19">Science: Mathematics</option>
+      <option value="20">Mythology</option>
+      <option value="21">Sports</option>
+      <option value="22">Geography</option>
+      <option value="23">History</option>
+      <option value="24">Politics</option>
+      <option value="25">Art</option>
+      <option value="26">Celebrities</option>
+      <option value="27">Animals</option>
+      <option value="28">Vehicles</option>
+      <option value="29">Entertainment: Comics</option>
+      <option value="30">Science: Gadgets</option>
+      <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+      <option value="32">Entertainment: Cartoon &amp; Animations</option>
+     </select>
+  </li>
+
+  <a href="game.html" > <button id="signUp" type="button" name="button"> START QUIZ </button></a>
+
+
+
+
+
+  </div>
 
 
 
