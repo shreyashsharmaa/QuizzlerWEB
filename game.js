@@ -12,10 +12,17 @@ let questionCounter = 0;
 let availableQuesions = [];
 
 let questions = [];
+const selected = window.localStorage.getItem("selectedValue");
+var url = "https://opentdb.com/api.php?amount=10&type=multiple";
+if(selected==0)
+{
+  url = url+""
+}
+else {
+  url = url+"&category="+selected;
+}
 
-fetch(
-  "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
-)
+fetch(url)
   .then(res => {
     return res.json();
   })
