@@ -35,7 +35,8 @@ else if (difficultyValue==1) {
 else if (difficultyValue==2) {
     url = url+"&difficulty=medium";
 }
-else if (difficultyValue==3) {
+else if (difficultyValue==3)
+{
   url = url+"&difficulty=hard";
 
 }
@@ -73,7 +74,7 @@ fetch(url)
     console.error(err);
   });
 
-//CONSTANTS
+
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
