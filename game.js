@@ -3,7 +3,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
-const loader = document.getElementById("loader");
+
 const game = document.getElementById("game");
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -13,14 +13,33 @@ let availableQuesions = [];
 
 let questions = [];
 const selected = window.localStorage.getItem("selectedValue");
+const difficultyValue = window.localStorage.getItem("selectedDifficulty");
 var url = "https://opentdb.com/api.php?amount=10&type=multiple";
 if(selected==0)
 {
-  url = url+""
+  url = url+"";
 }
 else {
   url = url+"&category="+selected;
 }
+
+
+if(difficultyValue==0)
+{
+    url = url+"";
+}
+else if (difficultyValue==1) {
+  url = url+"&difficulty=easy";
+
+}
+else if (difficultyValue==2) {
+    url = url+"&difficulty=medium";
+}
+else if (difficultyValue==3) {
+  url = url+"&difficulty=hard";
+
+}
+
 
 fetch(url)
   .then(res => {
