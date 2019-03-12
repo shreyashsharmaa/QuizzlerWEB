@@ -5,10 +5,6 @@
   <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
 <title>Quizzler - Sizzler for your Brain</title>
 <script>
-function open()
-{ window.open("welcome.html");
-
-}
 
 function validation()
 {
@@ -23,20 +19,40 @@ if(un=="" || em=="" || psw=="" || psw1=="")
 alert("All fields are required");
 return false;
 }
+
+
+
+
 if (ValidateEmail(em)){
-  return false;
-}
+  if(passid_validation(psw)){
+    if(passid_validation2(psw,psw1))
 
+return false;
 
+}}
 
-if(psw.length<8){
+function passid_validation(psw)
+{
+
+if(psw.length<8 ){
 alert("Password should contain alteast 8 characters");
 return false;
 }
-if(psw1!=psw){
-alert("Confirm Password does not match");
-return false;
+return true;
 }
+function passid_validation2(psw,psw1)
+{
+  if(psw1!=psw)
+  {
+  alert("Confirm Password does not match");
+  return false;
+  }
+
+return true;
+}
+
+
+
 
 function ValidateEmail(uemail)
 {
@@ -51,8 +67,13 @@ alert("You have entered an invalid email address!");
 return false;
 
 }
+
+
+
 }
 }
+
+
 
 </script>
 </head>
@@ -68,7 +89,7 @@ return false;
 
 <div id="SignUp-Box" >
 
-    <form id="SignUpForm" onsubmit=" return validation()">
+    <form id="SignUpForm" >
     <h1> CREATE AN ACCOUNT </h1><br>
    <input  id="username" type="text" name="username" placeholder="Username"><br>
 
@@ -80,7 +101,7 @@ return false;
    <input id="password2" type="password" name="password2"  placeholder="Re-enter Password"><br>
 
 
-<a href="welcome.html" target="_self" ><button class="signUp" type="submit"  onclick="validation()" >SIGN UP </button></a>
+<a  target="_self" ><button class="signUp" type="submit"  onclick="validation()" onsubmit="openw()" >SIGN UP </button></a>
 
  </form>
  <p style="text-size:32pt">Already User?</p>
