@@ -5,10 +5,6 @@
   <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
 <title>Quizzler - Sizzler for your Brain</title>
 <script>
-function open()
-{ window.open("welcome.html");
-
-}
 
 function validation()
 {
@@ -23,24 +19,48 @@ if(un=="" || em=="" || psw=="" || psw1=="")
 alert("All fields are required");
 return false;
 }
+
+
+
+
 if (ValidateEmail(em)){
-  return false;
-}
+  if(passid_validation(psw)){
+    if(passid_validation2(psw,psw1))
 
+return false;
 
+}}
 
-if(psw.length<8){
+function passid_validation(psw)
+{
+
+if(psw.length<8 ){
 alert("Password should contain alteast 8 characters");
 return false;
 }
-if(psw1!=psw){
-alert("Confirm Password does not match");
-return false;
+return true;
 }
+<<<<<<< HEAD
 else
 {window.location = "http://www.corelangs.com/js/basics/redirect.html";
 }
 }
+=======
+function passid_validation2(psw,psw1)
+{
+  if(psw1!=psw)
+  {
+  alert("Confirm Password does not match");
+  return false;
+  }
+
+return true;
+}
+
+
+
+
+>>>>>>> 222501d0f7c1b05c6b479665e1bf81480287485f
 function ValidateEmail(uemail)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -54,7 +74,12 @@ alert("You have entered an invalid email address!");
 return false;
 
 }
+
+
+
 }
+
+
 
 
 </script>
@@ -71,7 +96,11 @@ return false;
 
 <div id="SignUp-Box" >
 
+<<<<<<< HEAD
     <form id="SignUpForm"  method="post" action="save.php" >
+=======
+    <form id="SignUpForm" >
+>>>>>>> 222501d0f7c1b05c6b479665e1bf81480287485f
     <h1> CREATE AN ACCOUNT </h1><br>
    <input  id="username" type="text" name="username" placeholder="Username"><br>
 
@@ -83,7 +112,11 @@ return false;
    <input id="password2" type="password" name="password2"  placeholder="Re-enter Password"><br>
 
 
+<<<<<<< HEAD
 <button class="signUp" type="submit"  onclick="validation()" >SIGN UP </button>
+=======
+<a  target="_self" ><button class="signUp" type="submit"  onclick="validation()" onsubmit="openw()" >SIGN UP </button></a>
+>>>>>>> 222501d0f7c1b05c6b479665e1bf81480287485f
 
  </form>
  <p style="text-size:32pt">Already User?</p>
