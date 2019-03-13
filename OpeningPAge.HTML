@@ -37,7 +37,10 @@ if(psw1!=psw){
 alert("Confirm Password does not match");
 return false;
 }
-
+else
+{window.location = "http://www.corelangs.com/js/basics/redirect.html";
+}
+}
 function ValidateEmail(uemail)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -52,7 +55,7 @@ return false;
 
 }
 }
-}
+
 
 </script>
 </head>
@@ -68,7 +71,7 @@ return false;
 
 <div id="SignUp-Box" >
 
-    <form id="SignUpForm" onsubmit=" return validation()">
+    <form id="SignUpForm"  method="post" action="save.php" >
     <h1> CREATE AN ACCOUNT </h1><br>
    <input  id="username" type="text" name="username" placeholder="Username"><br>
 
@@ -80,7 +83,7 @@ return false;
    <input id="password2" type="password" name="password2"  placeholder="Re-enter Password"><br>
 
 
-<a href="welcome.html" target="_self" ><button class="signUp" type="submit"  onclick="validation()" >SIGN UP </button></a>
+<button class="signUp" type="submit"  onclick="validation()" >SIGN UP </button>
 
  </form>
  <p style="text-size:32pt">Already User?</p>
@@ -89,13 +92,6 @@ onclick="window.open('Login.html','self','width=600,height=600'); return false;"
 
 
       </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
