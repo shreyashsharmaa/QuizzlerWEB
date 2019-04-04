@@ -3,10 +3,10 @@
 	session_start();
  
 	if (!isset($_SESSION['id']) ||(trim ($_SESSION['id']) == '')) {
-		header('index.php');
+		header('Loginui.php');
 		exit();
 	}
-	$query=mysqli_query($conn,"select * from user where userid='".$_SESSION['id']."'");
+	$query=mysqli_query($connection,"select * from user where userid='".$_SESSION['id']."'");
 	$row=mysqli_fetch_assoc($query);
 ?>
 <!DOCTYPE html>

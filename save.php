@@ -7,7 +7,8 @@
 		}
 		
 		$query = "INSERT INTO signupdetails VALUES 
-('$username','$email','$password1')";
+(0,'$username','$email','$password1')";
+echo $query;
 		$insert_row = $mysqli->query($query);
 		if($insert_row){
 		  header("location:welcome.html");
