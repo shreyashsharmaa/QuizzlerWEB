@@ -1,3 +1,4 @@
+<?php session_start();?>
 <html>
 <head>
   <link rel="stylesheet" href="style2.css">
@@ -29,7 +30,7 @@ function validate(){
     <h1> Login </h1><br>
    <input  id="username" type="text" name="username"  value="<?php if (isset($_COOKIE["user"])){echo $_COOKIE["user"];}?>" id="username" placeholder="Username"><br>
    <input id="password1" type="password" name="password1" value="<?php if (isset($_COOKIE["pass"])){echo $_COOKIE["pass"];}?>" id="password1" placeholder="Password"><br>
-   <input type="checkbox" name="cookie" value="remember" checked>Remember me<br>
+   <input type="checkbox" name="cookie" value="remember"  value="1" checked>Remember me<br>
    <input id="loginButton" type="submit" value="Login" name="login" >
  </form>
       </div>

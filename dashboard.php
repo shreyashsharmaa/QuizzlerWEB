@@ -1,18 +1,27 @@
 <?php
-	include('db_connect.php')
+	$mysqli = new mysqli('localhost', 'root','','quizzler');
+
+		if($mysqli->connect_errno > 0){
+		die('Unable to connect to database [' . $db->connect_error . ']');
+		}
+ 
 	session_start();
  
 	if (!isset($_SESSION['id']) ||(trim ($_SESSION['id']) == '')) {
 		header('Loginui.php');
-		exit();
 	}
-	$query=mysqli_query($connection,"select * from user where userid='".$_SESSION['id']."'");
-	$row=mysqli_fetch_assoc($query);
+	$id=$_SESSION['id'];
+	$query = "SELECT * from signupdetails WHERE uname='$id'";
+
+$result = $mysqli->query($query);
+
+
+$row = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
+<title>DashBoard</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -135,7 +144,7 @@ body {
 
 <div class="navbar">
   <a href="welcome.html">Home</a>
-  <a href="Login.html" class="right">Log Out</a>
+  <a href="logout.php" class="right">Log Out</a>
 </div>
 
 <div class="row">
@@ -143,13 +152,13 @@ body {
     <h2>About Me</h2>
 
     <div  style="padding-left:30px;"><img id=profileImage src="#"></div>
-    <h2>Bio<?php echo $row['uname']; ?></h2>
+    <h2>Bio</h2>
 
     <p>About me  ,About meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout me</p>
     <h3>Email:</h3>
-    <p id="email"> abc@xyz.com</p>
+    <p id="email"> <?php echo $row['email'];?></p>
     <h3>Username:</h3>
-    <p id="email"> qwerty123</p>
+    <p id="email"> <?php echo $_SESSION['id']?></p>
   </div>
   <div class="main">
     <h2>Previous Quizes : </h2>
