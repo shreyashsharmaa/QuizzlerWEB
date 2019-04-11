@@ -1,7 +1,7 @@
 <?php
 	include('db_connect.php')
 	session_start();
- 
+
 	if (!isset($_SESSION['id']) ||(trim ($_SESSION['id']) == '')) {
 		header('index.php');
 		exit();
@@ -152,8 +152,9 @@ height:50vh;
 <div id="container">
 <form>
   <ul  style="list-style-type:none;">
-    <li><h3 style="margin-top:5vh;font-size:40px;">SELECT TOPIC FOR QUIZ</h3><li>
-    <li>
+
+    <li><h3 style="margin-top:5vh;font-size:40px;">SELECT TOPIC FOR QUIZ  AND THE DIFFICULTY LEVEL</h3><li>
+
       <select name="trivia_category" id = "topic" class="form-control" >
 	  <option value="0">Any Category</option>
       <option value="9">General Knowledge</option>
@@ -182,6 +183,7 @@ height:50vh;
       <option value="32">Entertainment: Cartoon & Animations</option>
      </select>
   </li><br>
+
   <select name="trivia_category" id = "difficulty" class="form-control">
   <<option value="0">Random</option>
   <option value="1">Easy</option>
