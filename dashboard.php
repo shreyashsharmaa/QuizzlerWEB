@@ -4,9 +4,9 @@
 		if($mysqli->connect_errno > 0){
 		die('Unable to connect to database [' . $db->connect_error . ']');
 		}
- 
+
 	session_start();
- 
+
 	if (!isset($_SESSION['id']) ||(trim ($_SESSION['id']) == '')) {
 		header('Loginui.php');
 	}
@@ -149,29 +149,27 @@ body {
 
 <div class="row">
   <div class="side">
-    <h2>About Me</h2>
+    <h2> WELCOME !!</h2>
 
-    <div  style="padding-left:30px;"><img id=profileImage src="#"></div>
-    <h2>Bio</h2>
-
-    <p>About me  ,About meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout me</p>
     <h3>Email:</h3>
     <p id="email"> <?php echo $row['email'];?></p>
     <h3>Username:</h3>
     <p id="email"> <?php echo $_SESSION['id']?></p>
   </div>
   <div class="main">
-    <h2>Previous Quizes : </h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>About me  ,About meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout me</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>About me  ,About meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout meAbout me.</p>
+    <h2>ABOUT QUIZZLER:</h2>
+    <p>The website “Quizzler” is a general trivia quiz website. It is basically to enhance the user’s knowledge in different fields like general knowledge, science , arts , history , geography , politics or random question from any general topic the user has to login if already registered by a username and password combination , or signup by email id . The user is then asked to select the topic of choice and the difficulty level. The user’s each  quiz result will be saved and user can view these on personal dashboard page where his personal profile and details will be displayed. After playing , the user can log out.
+		</p>
+
+		<h3> Important links </h3>
+
+		<p> Github link  for web :</p><a href="https://github.com/shreyashsharmaa/QuizzlerWEB"> Click here </a>
+
+		<p> The Android version of the Quizzler is also available :</p>
+		<p> Github link :</p><a href="https://github.com/shreyashsharmaa/QuizzlerAndroid "> Click here </a>
+
+
+
   </div>
 </div>
 
