@@ -1,4 +1,5 @@
 	<?php 
+		session_start();
 		extract($_POST);
 		$mysqli = new mysqli('localhost', 'root','','quizzler');
 
@@ -11,6 +12,7 @@
 echo $query;
 		$insert_row = $mysqli->query($query);
 		if($insert_row){
+			$_SESSION['id']=$username;
 		  header("location:welcome.html");
 		}
 		else{

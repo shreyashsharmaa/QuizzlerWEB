@@ -24,17 +24,19 @@ $row=$result->fetch_assoc();
 if ($count >0){
 
 //echo "Login Credentials verified";
-header("Location: welcome.html");
-if (isset($_POST['remember'])){
+
+if (isset($_POST['remember']))
+			{
 				//set up cookie
-				setcookie("user", $row['uname'], time() + (86400 * 30)); 
-				setcookie("pass", $row['psw'], time() + (86400 * 30)); 
+				setcookie('username', $username, time() + (60*60*24 * 30)); 
+				
+				 
 			}
  
-			$_SESSION['id']=$row['uname'];
-
+			$_SESSION['id']=$username;
+header("Location: welcome.html");
 }else{
-echo "<script type='text/javascript'>alert('Invalid Login Credentials')</script>";
+echo "<script type='text/javascript'>alert('Invalid Login Credentials');</script>";
 //echo "Invalid Login Credentials";
 header("Location:Loginui.php");
 }

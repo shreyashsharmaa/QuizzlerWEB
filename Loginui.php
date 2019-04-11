@@ -1,4 +1,4 @@
-<?php session_start();?>
+ <?php session_start();?>
 <html>
 <head>
   <link rel="stylesheet" href="style2.css">
@@ -28,9 +28,9 @@ function validate(){
 <div id="login-Box" >
     <form id="loginForm" onsubmit="return validate()"  action="login.php" method="post">
     <h1> Login </h1><br>
-   <input  id="username" type="text" name="username"  value="<?php if (isset($_COOKIE["user"])){echo $_COOKIE["user"];}?>" id="username" placeholder="Username"><br>
-   <input id="password1" type="password" name="password1" value="<?php if (isset($_COOKIE["pass"])){echo $_COOKIE["pass"];}?>" id="password1" placeholder="Password"><br>
-   <input type="checkbox" name="cookie" value="remember"  value="1" checked>Remember me<br>
+   <input  id="username" type="text" name="username"   id="username" placeholder="Username"><br>
+   <input id="password1" type="password" name="password1"  id="password1" placeholder="Password"><br>
+   <input type="checkbox" name="remember" value="1"   >Remember me<br>
    <input id="loginButton" type="submit" value="Login" name="login" >
  </form>
       </div>
@@ -42,5 +42,19 @@ function validate(){
 		unset($_SESSION['message']);
 	?>
 	</span>
-</body>
+	</body>
 </html>
+<?php
+
+       
+	if(isset($_COOKIE['username'])||isset($_COOKIE['password']))
+	{ $email = $_COOKIE['username'];
+      
+      echo "<script >
+		document.getElementById('username').value='$email';
+		
+        
+	</script>";
+	}
+    
+	?>
